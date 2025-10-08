@@ -1,5 +1,7 @@
-<x-contact::layouts.master>
-    <h1>Hello World</h1>
+@extends(backpack_view('blank'))
 
-    <p>Module: {!! config('contact.name') !!}</p>
-</x-contact::layouts.master>
+@section('content')
+<div id="contacts-vue-app"></div>
+@endsection
+
+@vite(['Modules/Contacts/Resources/js/admin.js'])
