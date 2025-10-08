@@ -27,6 +27,14 @@ class ContactServiceProvider extends ServiceProvider
         $this->registerConfig();
         $this->registerViews();
         $this->loadMigrationsFrom(module_path($this->name, 'database/migrations'));
+
+        // Add sidebar menu item dynamically for Backpack
+        \Backpack\CRUD\app\Library\Widget::add([
+            'type' => 'menu_item',
+            'text' => 'Contacts',
+            'icon' => 'la la-address-book',
+            'url'  => backpack_url('contact'),
+        ])->to('sidebar_content');
     }
 
     /**

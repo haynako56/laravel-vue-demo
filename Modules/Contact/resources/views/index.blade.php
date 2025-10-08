@@ -4,4 +4,4 @@
 <div id="contacts-vue-app"></div>
 @endsection
 
-@vite(['Modules/Contacts/Resources/js/admin.js'])
+@vite(['Modules/Contact/resources/assets/js/app.js'])
